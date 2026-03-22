@@ -1,11 +1,37 @@
 package com.example.product_service.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Data @Setter @Getter
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Data
+@Setter
+@Getter
+@Entity
+@Table(name = "product_info")
+@Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private BigDecimal price;
+
+    private String description;
+    private Integer stock;
+    private String category;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+
 }
