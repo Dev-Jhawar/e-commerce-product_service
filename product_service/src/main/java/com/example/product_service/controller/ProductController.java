@@ -3,7 +3,6 @@ package com.example.product_service.controller;
 import com.example.product_service.dto.CreateProductDTO;
 import com.example.product_service.service.ProductService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
