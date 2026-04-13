@@ -1,0 +1,13 @@
+
+// Table product_info Schema
+
+CREATE TABLE product_info (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price NUMERIC(10,2) NOT NULL,
+    description TEXT,
+    stock INTEGER,
+    category VARCHAR(100),
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+);
